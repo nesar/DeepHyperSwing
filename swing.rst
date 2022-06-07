@@ -16,7 +16,7 @@ After logging in Swing, connect to a GPU node:
 
     $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
 
-Then, check the allocated node using squeue
+Then, check the allocated node using ``squeue``
 
 .. code-block:: consoule
     
