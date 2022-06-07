@@ -23,7 +23,7 @@ Then, check the allocated node using squeue
 
 Then, to access Deephyper run the following commands:
 
-.. code-block:: console
+.. code-block:: consoule
 
     $ module load conda/2021-09-22
     $ conda activate base
