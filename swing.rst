@@ -19,6 +19,7 @@ After logging in Swing, connect to a GPU node:
 Then, check the allocated node using squeue
 
 .. code-block:: consoule
+    
     $ ssh gpu4
 
 Then, to access Deephyper run the following commands:
