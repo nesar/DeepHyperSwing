@@ -8,11 +8,18 @@ Swing (Argonne LCRC)
 Already installed module
 ========================
 
-This installation procedure shows you how to access the installed DeepHyper module on ThetaGPU. After logging in Theta, connect to a ThetaGPU service node:
+This installation procedure shows you how to access the installed DeepHyper module on Swing. 
+
+After logging in Swing, connect to a GPU node:
 
 .. code-block:: console
 
-    $ ssh thetagpusn1
+    $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
+
+Then, check the allocated node using squeue
+
+.. code-block:: consoule
+    $ ssh gpu4
 
 Then, to access Deephyper run the following commands:
 
