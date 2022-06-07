@@ -1,9 +1,9 @@
-ThetaGPU (Argonne LCF)
+Swing (Argonne LCRC)
 **********************
 
-`ThetaGPU <https://www.alcf.anl.gov/theta>`_  is an extension of Theta and is comprised of 24 NVIDIA DGX A100 nodes at Argonne Leadership Computing Facility (ALCF). See the `documentation <https://argonne-lcf.github.io/ThetaGPU-Docs/>`_ of ThetaGPU from the Datascience group at Argonne National Laboratory for more information. The system documentation from the ALCF can be accessed `here <https://www.alcf.anl.gov/support-center/theta-gpu-nodes/getting-started-thetagpu>`_.
+`Swing <https://www.lcrc.anl.gov/systems/resources/swing/>`_  is part of the Argonne Laboratory Computing Resource Center (LCRC), consisting of 6 public compute nodes with 8x NVIDIA A100 GPUS-per-node. See the `documentation <https://www.lcrc.anl.gov/for-users/using-lcrc/running-jobs/running-jobs-on-swing/>`_ of Swing for a detailed information on how to run jobs on Swing. 
 
-.. _thetagpu-module-installation:
+.. _swing-module-installation:
 
 Already installed module
 ========================
