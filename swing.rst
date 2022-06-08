@@ -16,18 +16,45 @@ After logging in Swing, connect to a GPU node:
 
     $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
 
-Then, check the allocated node using ``squeue``
+Then, check the allocated node using ``squeue``. Say, the node allocated is gpu4. Next, log in to the allocated node.
 
 .. code-block:: consoule
     
     $ ssh gpu4
 
-Then, to access Deephyper run the following commands:
+Then, load the following modules:
 
 .. code-block:: consoule
 
-    $ module load conda/2021-09-22
-    $ conda activate base
+    $ module load gcc/9.2.0-r4tyw54 cuda/11.0.2-4szlv2t
+    $ module load openmpi/4.1.0-cuda11.0.2-tyz7hlj
+    $ module load cuda/11.2.1 cudnn/8.1.1.33
+
+
+Conda environment
+=================
+
+This installation procedure shows you how to create your own Conda virtual environment.
+
+ Create condo environment and install necessary packages
+
+.. code-block:: console
+
+	$ conda create -p env_dh --clone base
+	$ conda activate env_dh
+    
+    
+Developer installation
+======================
+
+Finally install DeepHyper in the previously created ``env_dh`` environment:
+
+.. code-block:: console
+    
+    $ git clone https://github.com/deephyper/deephyper.git
+    $ cd deephyper/ && git checkout develop
+    $ pip install -e ".[dev,analytics]"
+
 
 Finally, to verify the installation do:
 
@@ -37,67 +64,3 @@ Finally, to verify the installation do:
     >>> import deephyper
     >>> deephyper.__version__
     '0.3.0'
-
-.. _thetagpu-conda-environment:
-
-Conda environment
-=================
-
-This installation procedure shows you how to create your own Conda virtual environment and install DeepHyper in it.
-
-.. admonition:: Storage/File Systems
-    :class: dropdown, important
-
-    It is important to run the following commands from the appropriate storage space because some features of DeepHyper can generate a consequante quantity of data such as model checkpointing. The storage spaces available at the ALCF are:
-
-    - ``/lus/grand/projects/``
-    - ``/lus/eagle/projects/``
-    - ``/lus/theta-fs0/projects/``
-
-    For more details refer to `ALCF Documentation <https://www.alcf.anl.gov/support-center/theta/theta-file-systems>`_.
-
-After logging in Theta, locate yourself on one of the ThetaGPU service node (``thetagpusnX``) and move to your project folder (replace ``PROJECTNAME`` by your own project name):
-
-.. code-block:: console
-
-    $ ssh thetagpusn1
-    $ cd /lus/theta-fs0/projects/PROJECTNAME
-
-Then create the ``dhgpu`` environment:
-
-.. code-block:: console
-
-    $ module load conda/2021-09-22
-    $ conda create -p dhgpu --clone base
-    $ conda activate dhgpu/
-
-Finally install DeepHyper in the previously created ``dhgpu`` environment:
-
-.. code-block:: console
-
-    $ pip install pip --upgrade
-    $ # DeepHyper + Analytics Tools (Parsing logs, Plots, Notebooks)
-    $ pip install deephyper["analytics"]
-
-
-Developer installation
-======================
-
-Follow the :ref:`thetagpu-conda-environment` installation and replace ``pip install deephyper[analytics]`` by:
-
-.. code-block:: console
-
-    $ git clone https://github.com/deephyper/deephyper.git
-    $ cd deephyper/ && git checkout develop
-    $ pip install -e ".[dev,analytics]"
-
-
-Internet Access
-===============
-
-If the node you are on does not have outbound network connectivity, set the following to access the proxy host:
-
-.. code-block:: console
-
-    $ export http_proxy=http://proxy.tmi.alcf.anl.gov:3128
-    $ export https_proxy=http://proxy.tmi.alcf.anl.gov:3128
