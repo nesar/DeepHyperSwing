@@ -31,10 +31,13 @@ Then, load the following modules:
     $ module load cuda/11.2.1 cudnn/8.1.1.33
     $ module load anaconda3/2020.11
     
+    
+The shell has to be properly configured to use ``conda activate``. To initialize your shell, use:
  
- .. code-block:: consoule
+.. code-block:: consoule
  
     $ conda init bash
+    $ source ~/.bashrc
 
 
 Conda environment
@@ -42,7 +45,8 @@ Conda environment
 
 This installation procedure shows you how to create your own Conda virtual environment.
 
- Create condo environment and install necessary packages
+ Create condo environment and install necessary packages. You can list all discoverable environments with ``conda info --envs``.
+
 
 .. code-block:: console
 
