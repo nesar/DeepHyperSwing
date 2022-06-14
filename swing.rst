@@ -45,8 +45,7 @@ Conda environment
 
 This installation procedure shows you how to create your own Conda virtual environment.
 
- Create condo environment and install necessary packages. You can list all discoverable environments with ``conda info --envs``.
-
+Create condo environment and install necessary packages. You can list all discoverable environments with ``conda info --envs``.
 
 .. code-block:: console
 
