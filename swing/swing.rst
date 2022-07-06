@@ -8,7 +8,7 @@ Swing (Argonne LCRC)
 Set-up to connect to Swing. 
 ========================
 
-Open ~/.ssh/config file on your home computer. 
+Open ``~/.ssh/config`` file on your home computer. 
 
 Dedicate a port for Swing (XXXX in this case). This port number will be required later.
 Use your USERNAME and location of the SSH_KEY. The ssh key has to be saved on the LCRC `webpage <https://accounts.lcrc.anl.gov/>`_. 
