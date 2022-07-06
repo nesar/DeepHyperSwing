@@ -93,7 +93,7 @@ The follwing 2 steps have to be followed to run jupyter kernel on Swing GPU. The
 	   $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
 	   $ ssh gpuX
 
-	* Run the Jupyter kernel after ssh-ing into the GPU node. 
+	* Run the Jupyter kernel after ssh-ing into the GPU node. First update the port number in ``launch_notebook.sh``.
 
 	.. code-block:: console
 
