@@ -83,32 +83,32 @@ Using Jupyter notebook on Swing
 
 The follwing 2 steps have to be followed to run jupyter kernel on Swing GPU. The following procedue only works for a single node job (one can use all the 8 GPUs in the node, depending on the allocation).  
 
-* Start the remote Jupyter kernel without interface.
+1. Start the remote Jupyter kernel without interface.
 
-Open the first terminal and run the usual commands to log-in to an allocated node. 
+	* Open the first terminal and run the usual commands to log-in to an allocated node. 
 
-.. code-block:: console
+	.. code-block:: console
 
-   $ ssh swing
-   $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
-   $ ssh gpuX
-   
-Run the Jupyter kernel after ssh-ing into the GPU node. 
+	   $ ssh swing
+	   $ salloc -p gpu -N 1 --gres=gpu:1 -t 1:00:00
+	   $ ssh gpuX
 
-.. code-block:: console
+	* Run the Jupyter kernel after ssh-ing into the GPU node. 
 
-   $ source launch_notebook.sh
+	.. code-block:: console
 
-This initiates a JupyterLab kernel without an iterface. Copy the notebook URL generated from the Jupyter kernel. 
+	   $ source launch_notebook.sh
 
-* Forward the remote port to the local port. 
+	This initiates a JupyterLab kernel without an iterface. Copy the notebook URL generated from the Jupyter kernel. 
 
-Open the second terminal for porting the display to our workstation. 
+2. Forward the remote port to the local port. 
 
-.. code-block:: console
+	* Open the second terminal for porting the display to our workstation. 
 
-   $ ssh -L XXXX:localhost:XXXX swing
-   $ ssh -L XXXX:localhost:XXXX gpu2
+	.. code-block:: console
 
-The URL can be pasted on your browser. Any notebook can be opened with the JupyterLab, with access to Swing GPUs for executions. 
+	   $ ssh -L XXXX:localhost:XXXX swing
+	   $ ssh -L XXXX:localhost:XXXX gpuX
+
+	* The URL can be pasted on your browser. Any notebook can be opened with the JupyterLab, with access to Swing GPUs for executions. 
  
