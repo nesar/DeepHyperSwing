@@ -46,7 +46,7 @@ Then, check the allocated node using ``squeue``. Say, the node allocated is gpu4
     
     $ ssh gpu4
 
-Copy and Paste the files ``dh_install.sh``, ``load_modules.sh`` and ``launch_notebook.sh`` on your folder on Swing, and then run the script.
+Copy and Paste the files `dh_install.sh <https://github.com/nesar/DeepHyperSwing/blob/main/swing/dh_install.sh>`_, `load_modules.sh <https://github.com/nesar/DeepHyperSwing/blob/main/swing/load_modules.sh>`_ and `launch_notebook.sh <https://github.com/nesar/DeepHyperSwing/blob/main/swing/launch_notebook.sh>`_ on your folder on Swing, and then run the script.
 
 .. code-block:: consoule
     
