@@ -1,7 +1,11 @@
+'''
+The script for mpi-based evaluator
+
+References:
 ## https://deephyper.readthedocs.io/en/latest/tutorials/tutorials/scripts/03_Evaluators/README.html
 ## https://github.com/deephyper/tutorials/blob/main/tutorials/scripts/03_Evaluators/ackley.py
-
-
+## https://deephyper.readthedocs.io/en/latest/tutorials/tutorials/alcf/03_ThetaGPU_mpi/README.html
+'''
 
 if __name__ == "__main__":
     from deephyper.evaluator import Evaluator
@@ -19,7 +23,6 @@ if __name__ == "__main__":
     
     ###########################
     
-    # https://deephyper.readthedocs.io/en/latest/tutorials/tutorials/alcf/03_ThetaGPU_mpi/README.html
     from mpi4py import MPI
 
     if not MPI.Is_initialized():
