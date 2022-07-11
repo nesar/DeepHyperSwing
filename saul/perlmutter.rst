@@ -63,5 +63,5 @@ Once DeepHyper is installed, one can use the deephyper after loading the modules
 Using Jupyter notebook on Perlmutter
 ========================
 
-NERSC also allows for launching jupyter kernel on Perlmutter. One can visit `jupyer.nersc.gov <https://jupyter.nersc.gov/>`_ and select Exclusive GPU node or a configurable GPU node (up to 4 GPU nodes, with 4 GPUs each). 
+NERSC also allows for launching jupyter kernel on Perlmutter. One can visit `jupyter.nersc.gov <https://jupyter.nersc.gov/>`_ and select Exclusive GPU node or a configurable GPU node (up to 4 GPU nodes, with 4 GPUs each). 
  
