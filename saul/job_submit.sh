@@ -10,7 +10,7 @@
 
 
 # User Configuration
-INIT_SCRIPT=$PWD/activate-dhenv.sh
+INIT_SCRIPT=$PWD/load_modules.sh
 
 SLURM_JOBSIZE=128
 RANKS_PER_NODE=4
@@ -18,9 +18,7 @@ RANKS_PER_NODE=4
 # Initialization of environment
 source $INIT_SCRIPT
 
-
-srun -N $SLURM_JOBSIZE -n $RANKS_PER_NODE python evaluator_mpi.py
-# srun -N $SLURM_JOBSIZE -n $(( $SLURM_JOBSIZE * $RANKS_PER_NODE )) python evaluator_mpi.py
+srun -N $SLURM_JOBSIZE -n $(( $SLURM_JOBSIZE * $RANKS_PER_NODE )) python evaluator_mpi.py
 
 
 echo "Complete"
