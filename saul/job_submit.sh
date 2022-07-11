@@ -1,11 +1,13 @@
 #!/bin/bash
 #SBATCH -A dasrepo_g
-#SBATCH --job-name=ackley
+#SBATCH --job-name=dh_cbo_lstm
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -t 1:00:00
 #SBATCH --nodes=128
 #SBATCH --gres=gpu:4
+# #SBATCH --gpus-per-task=2
+
 
 # User Configuration
 INIT_SCRIPT=$PWD/activate-dhenv.sh
@@ -16,6 +18,9 @@ RANKS_PER_NODE=4
 # Initialization of environment
 source $INIT_SCRIPT
 
-srun -n $(( $SLURM_JOBSIZE * $RANKS_PER_NODE )) -N $SLURM_JOBSIZE python evaluator_mpi.py
+
+srun -N $SLURM_JOBSIZE -n $RANKS_PER_NODE python evaluator_mpi.py
+# srun -N $SLURM_JOBSIZE -n $(( $SLURM_JOBSIZE * $RANKS_PER_NODE )) python evaluator_mpi.py
+
 
 echo "Complete"
