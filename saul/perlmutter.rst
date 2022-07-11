@@ -7,7 +7,7 @@ Perlmutter, a HPE Cray supercomputer at NERSC, is a heterogeneous system with bo
 Connect to Perlmutter. 
 ========================
 
-For connecting to, check `documentation <https://docs.nersc.gov/systems/perlmutter/#connecting-to-perlmutter>`_. One can connect to Perlmutter via terminal. One can also configure SSH according to the `instructions <https://docs.nersc.gov/connect/mfa/#ssh-configuration-file-options>`_. 
+For connecting to Perlmutter, check `documentation <https://docs.nersc.gov/systems/perlmutter/#connecting-to-perlmutter>`_. One can also configure SSH according to the `instructions <https://docs.nersc.gov/connect/mfa/#ssh-configuration-file-options>`_. To connect to Perlmutter via terminal, use:
 
 .. code-block:: console
 
