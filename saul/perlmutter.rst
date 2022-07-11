@@ -1,23 +1,13 @@
-
-4x NVIDIA A100 GPUs
-
-
-SSH config: https://docs.nersc.gov/connect/mfa/#ssh-configuration-file-options
-
-
-
-
-
 Perlmutter (Argonne LCRC)
 **********************
 
-Perlmutter, a HPE Cray EX supercomputer at NERSC, is a heterogeneous system with both GPU-accelerated and CPU-only nodes. 
+Perlmutter, a HPE Cray supercomputer at NERSC, is a heterogeneous system with both GPU-accelerated and CPU-only nodes. Each GPU node of Perlmutter has 4x NVIDIA A100 GPUs. 
 
 
 Connect to Perlmutter. 
 ========================
 
-For SSH configuration, check documentation https://docs.nersc.gov/systems/perlmutter/#connecting-to-perlmutter. One can connect to Perlmutter via terminal.
+For connecting to, check `documentation <https://docs.nersc.gov/systems/perlmutter/#connecting-to-perlmutter>`_. One can connect to Perlmutter via terminal. One can also configure SSH according to the `instructions <https://docs.nersc.gov/connect/mfa/#ssh-configuration-file-options>`_. 
 
 .. code-block:: console
 
