@@ -1,7 +1,7 @@
 Perlmutter (NERSC)
 **********************
 
-Perlmutter, a HPE Cray supercomputer at NERSC, is a heterogeneous system with both GPU-accelerated and CPU-only nodes. Each GPU node of Perlmutter has 4x NVIDIA A100 GPUs. 
+Perlmutter, a HPE Cray supercomputer at NERSC, is a heterogeneous system with both GPU-accelerated and CPU-only nodes. Phase 1 of the installation is made up of 12 GPU-accelerated cabinets housing over 1,500 nodes. Phase 2 adds 12 CPU cabinets with more than 3,000 nodes. Each GPU node of Perlmutter has 4x NVIDIA A100 GPUs. 
 
 
 Connect to Perlmutter. 
