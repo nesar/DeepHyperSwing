@@ -35,7 +35,7 @@ Next, we create a conda environment and install DeepHyper.
     $ conda install gxx_linux-64 gcc_linux-64
 
 
-The crucial step is to install CUDA aware mpi4py, following the instructions given in the documentation. `[mpi4py] <https://docs.nersc.gov/development/languages/python/using-python-perlmutter/#building-cuda-aware-mpi4py>`_
+The crucial step is to install CUDA aware mpi4py, following the instructions given in the `[mpi4py documentation] <https://docs.nersc.gov/development/languages/python/using-python-perlmutter/#building-cuda-aware-mpi4py>`_
 
 .. code-block:: console
 
