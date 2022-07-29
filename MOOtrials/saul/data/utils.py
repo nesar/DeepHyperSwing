@@ -115,7 +115,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ####################################################################################################################################
 ####################################################################################################################################
 
-def load_data(nSamples):
+def load_data(nSamples, nGrid, train_test_split):
     
     dirIn = '/global/cfs/projectdirs/dasrepo/nramachandra/data/new_void_prism/Data/'
 
@@ -136,7 +136,6 @@ def load_data(nSamples):
 
     target_all = np.vstack([max_stress, vol90]).T
 
-    print(ell_all.shape)
     split = np.int32( train_test_split*ell_all.shape[0] )
 
     train_data = ell_all[0:split, :, :].astype('float32')
@@ -151,8 +150,8 @@ def load_data(nSamples):
             
 ############################################
     
-def load_data_prepared(nSamples, nGrid, test_train_split):
-    (train_input, train_target), (test_input, test_target) = load_data(nSamples)
+def load_data_prepared(nSamples, nGrid, train_test_split):
+    (train_input, train_target), (test_input, test_target) = load_data(nSamples, nGrid, train_test_split)
     
     # RESCALING IMAGES
 
