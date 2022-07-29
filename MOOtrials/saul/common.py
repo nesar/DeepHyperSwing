@@ -11,6 +11,7 @@ from map2d import problem
 NUM_WORKERS = 8 - 4  # ($SLURM_JOBSIZE * $RANKS_PER_NODE) - $RANKS_PER_NODE
 SEARCH_TIMEOUT = 200
 RUN_SLEEP = 1
+MAX_EVALS = 1000
 
 
 def execute_search(evaluator):
@@ -31,7 +32,7 @@ def execute_search(evaluator):
     print("Starting the search...")
 
     # results = search.search(timeout=SEARCH_TIMEOUT)
-    results = search.search(max_evals=2000)
+    results = search.search(max_evals=MAX_EVALS)
 
     print("Search is done")
     results.to_csv("results.csv")

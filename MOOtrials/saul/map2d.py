@@ -15,8 +15,8 @@ from keras.utils.layer_utils import count_params
 problem = HpProblem()
 problem.add_hyperparameter(["sigmoid", "tanh", "relu"], "activation", default_value="relu")
 problem.add_hyperparameter((1e-5, 1e-2, "log-uniform"), "learning_rate", default_value=1e-3)
-problem.add_hyperparameter((2, 8), "batch_size", default_value=4)
-problem.add_hyperparameter((10, 100), "epochs", default_value=20)
+problem.add_hyperparameter((1, 4), "batch_size", default_value=4)
+problem.add_hyperparameter((4, 20), "epochs", default_value=10)
 
 from common import RUN_SLEEP
 
@@ -54,16 +54,16 @@ def build_and_train_model(config: dict, n_components: int = 2, verbose: bool = 0
         "activation": "relu",
         "learning_rate": 1e-3,
         "batch_size": 4,
-        "epochs": 20,
+        "epochs": 5,
     }
     default_config.update(config)
     
     nSamples = 1000
     nGrid = 1024
-    test_train_split = 0.9
+    train_test_split = 0.9
 
     
-    (X_train, y_train), (X_valid, y_valid) = load_data_prepared(nSamples, nGrid, test_train_split)
+    (X_train, y_train), (X_valid, y_valid) = load_data_prepared(nSamples, nGrid, train_test_split)
 
 
     model = tf.keras.Sequential(
