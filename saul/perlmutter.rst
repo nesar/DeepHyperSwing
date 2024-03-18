@@ -17,9 +17,9 @@ For connecting to Perlmutter, check `documentation <https://docs.nersc.gov/syste
 DeepHyper Installation
 ========================
 
-After logging in Perlmutter, use the `installation script <https://github.com/nesar/DeepHyperSwing/blob/main/saul/dh_install.sh>`_ provided to install DeepHyper and the associated dependencies. Download the file and run ``source dh_install.sh`` on the terminal. 
+After logging in Perlmutter, run the following to install deephyper. 
 
-The script first loads the Perlmutter modules, including cuDNN. 
+First load the Perlmutter modules, including cuDNN. 
 
 .. code-block:: console
 
@@ -42,7 +42,7 @@ The crucial step is to install CUDA aware mpi4py, following the instructions giv
 
     $ MPICC="cc -shared" CC=nvc CFLAGS="-noswitcherror" pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
 
-Finally we install deephyper and other packages. 
+Finally, we install deephyper and other packages. 
 
 .. code-block:: console
 
