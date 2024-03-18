@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -A dasrepo_g
-#SBATCH --job-name=dh_cbo_lstm
+#SBATCH -A <allocation account>
+#SBATCH --job-name=dh_cbo
 #SBATCH -C gpu
 #SBATCH -q regular
 #SBATCH -t 1:00:00
