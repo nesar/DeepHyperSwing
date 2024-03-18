@@ -23,15 +23,16 @@ The script first loads the Perlmutter modules, including cuDNN.
 
 .. code-block:: console
 
-    $ module load PrgEnv-nvidia cudatoolkit python
-    $ module load cudnn/8.2.0
+    $ module load PrgEnv-nvidia cray-mpich craype-accel-nvidia80 python
+    $ module load cudatoolkit/12.2
+    $ module load cudnn/8.9.3_cuda12
 
 Next, we create a conda environment and install DeepHyper. 
 
 .. code-block:: console
 
-    $ conda create -n dh python=3.9 -y
-    $ conda activate dh
+    $ conda create -n dh_env_2024 python=3.9 -y
+    $ conda activate dh_env_2024
     $ conda install gxx_linux-64 gcc_linux-64
 
 
@@ -39,17 +40,19 @@ The crucial step is to install CUDA aware mpi4py, following the instructions giv
 
 .. code-block:: console
 
-    $ MPICC="cc -target-accel=nvidia80 -shared" CC=nvc CFLAGS="-noswitcherror" pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
+    $ MPICC="cc -shared" CC=nvc CFLAGS="-noswitcherror" pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
 
 Finally we install deephyper and other packages. 
 
 .. code-block:: console
 
-    $ pip install deephyper==0.4.0
-    $ pip install tensorflow
+    $ pip install tensorflow==2.9.2
     $ pip install kiwisolver
     $ pip install cycler
-
+    $ pip install matplotlib
+    $ pip install progressbar2
+    $ pip install networkx[default]
+    $ pip install deephyper
 
 
 Running the installed DeepHyper
