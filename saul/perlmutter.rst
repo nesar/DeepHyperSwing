@@ -34,13 +34,13 @@ Next, we create a conda environment and install DeepHyper.
     $ conda create -n dh_env_2024 python=3.9 -y
     $ conda activate dh_env_2024
     $ conda install gxx_linux-64 gcc_linux-64
-    $ export MPICH_GPU_SUPPORT_ENABLED=1 
 
 
 The crucial step is to install CUDA aware mpi4py, following the instructions given in the `mpi4py documentation <https://docs.nersc.gov/development/languages/python/using-python-perlmutter/#building-cuda-aware-mpi4py>`_
 
 .. code-block:: console
 
+    $ export MPICH_GPU_SUPPORT_ENABLED=1 
     $ MPICC="cc -shared" CC=nvc CFLAGS="-noswitcherror" pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
 
 Finally, we install deephyper and other packages. 
