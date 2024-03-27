@@ -69,13 +69,30 @@ Using Jupyter notebook on Perlmutter
 
 NERSC also allows for launching jupyter kernel on Perlmutter. One can visit `jupyter.nersc.gov <https://jupyter.nersc.gov/>`_ and select Exclusive GPU node or a configurable GPU node (up to 4 GPU nodes, with 4 GPUs each). 
 
-Scaling studies
+Scaling studies: MPI evaluator profiling on Perlmutter
 ========================
 
-.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/mpi_evaluator292.png
+The plot shows the number of jobs submitted and running with time. The first plot is shown for 16 GPUs. 
+
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/mpi_evaluator490.png
     :align: center
 
+The plot shows the same trend for 32 GPUs. 
 
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/mpi_evaluator490.png
+    :align: center
+
+The plot shows the same trend for 64 GPUs.
+
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/mpi_evaluator598.png
+    :align: center
+
+The Average Job duration vs. the number of GPUs is shown below, along with the speed-up scaling plot.
+
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/output_timing.png
+    :align: center
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/output_scaling.png
+    :align: center
 
 
  
