@@ -72,6 +72,10 @@ NERSC also allows for launching jupyter kernel on Perlmutter. One can visit `jup
 Scaling studies
 ========================
 
+.. image:: https://github.com/nesar/DeepHyperSwing/blob/main/saul/mpi_evaluator292.png
+    :align: center
+
+
 
 
  
